@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+</head>
+<body>
+
+
+<a href="/oauth2/authorization/google" ><img th:src="@{/images/google.png}"/></a>
+
+<br/><br/>
+
+이름: <b th:text="${userName}"></b><br/>
+이메일: <b th:text="${email}"></b><br/>
+프로필사진:<p><img th:src="@{${userImg}}" width="200" height="200" border="1"/></p>
+
+<br/><br/>
+
+<a href="/logout" >Logout</a>
+
+</body>
+</html>
