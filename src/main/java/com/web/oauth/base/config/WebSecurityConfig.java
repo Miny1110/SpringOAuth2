@@ -27,7 +27,7 @@ public class WebSecurityConfig {
 			.csrf().disable().headers().frameOptions().disable()
 			.and()
 			.authorizeRequests()
-			.antMatchers("/","css/**","/image/**","js/**","h2/**","/h2-console/**").permitAll()
+			.antMatchers("/","css/**","/images/**","js/**","h2/**","/h2-console/**").permitAll()
 			.antMatchers("/api/v1/**").hasRole(BaseAuthRole.USER.name())
 			.anyRequest().authenticated()
 			.and()
